@@ -494,7 +494,7 @@
     },
     "gradle/wrapper/gradle-wrapper.properties": {
       "mode": "100644",
-      "sha": "94c356a03a3bb60b2e852748e5a3a3cb36aada9c"
+      "sha": "04d7959523bb789fac2c02ec57272eca3de5cf5a"
     },
     "gradlew": {
       "mode": "100755",
@@ -526,7 +526,7 @@
     },
     "lib-multisrc/madara/build.gradle.kts": {
       "mode": "100644",
-      "sha": "53f9c89754613e3ca991f316dacd7d0173249d83"
+      "sha": "3c988a26edb13260fa4cfcb1bc7e4757e3b0fd1a"
     },
     "lib-multisrc/madara/res/mipmap-hdpi/ic_launcher.png": {
       "mode": "100644",
@@ -558,7 +558,7 @@
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/MadaraBase.kt": {
       "mode": "100644",
-      "sha": "0be5bc0e7b507240f34ba89577b005035b2c25ef"
+      "sha": "9fa0010831648c29df7f14d7cd3d73bfa531173f"
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/MadaraNoAjax.kt": {
       "mode": "100644",
@@ -742,5 +742,5 @@
     }
   },
   "repository": "keiyoushi/extensions-source",
-  "revision": "1b7089818edf1e36bf71256369e4c6f36bbd9158"
+  "revision": "53ca84819ae31a9651178b669bc24861f480c2c3"
 }
