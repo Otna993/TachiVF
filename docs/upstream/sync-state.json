@@ -18,7 +18,7 @@
     },
     "CONTRIBUTING.md": {
       "mode": "100644",
-      "sha": "c8482badea1d3214c14c70eadceb21a380b331f9"
+      "sha": "c9efaf0f5d6580d4a8d83ad0286e7da7b77f5ec2"
     },
     "LICENSE": {
       "mode": "100644",
@@ -174,11 +174,11 @@
     },
     "core/src/main/kotlin/keiyoushi/utils/TurnstileHelper.kt": {
       "mode": "100644",
-      "sha": "ebe6bb48e25e1848ff26c3b9b0f4ec11712cb582"
+      "sha": "27620044498eb7f2aac0b972d2f5fd7604720727"
     },
     "core/src/main/kotlin/keiyoushi/utils/WebView.kt": {
       "mode": "100644",
-      "sha": "b8470faba1000adcd99681404b529586ac653f98"
+      "sha": "b98710c4172cac73fd3150324ec7ea1d87689892"
     },
     "core/src/main/kotlin/keiyoushi/utils/protobuf/ProtobufDecoder.kt": {
       "mode": "100644",
@@ -742,5 +742,5 @@
     }
   },
   "repository": "keiyoushi/extensions-source",
-  "revision": "53ca84819ae31a9651178b669bc24861f480c2c3"
+  "revision": "02402ef9c33bcf23405cf6214c33ab160917a4c0"
 }
