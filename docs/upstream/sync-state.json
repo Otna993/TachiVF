@@ -18,7 +18,7 @@
     },
     "CONTRIBUTING.md": {
       "mode": "100644",
-      "sha": "c9efaf0f5d6580d4a8d83ad0286e7da7b77f5ec2"
+      "sha": "5f9a2cfcbd921e34f7242f17c6ea6f7ad994da09"
     },
     "LICENSE": {
       "mode": "100644",
@@ -174,11 +174,11 @@
     },
     "core/src/main/kotlin/keiyoushi/utils/TurnstileHelper.kt": {
       "mode": "100644",
-      "sha": "27620044498eb7f2aac0b972d2f5fd7604720727"
+      "sha": "8b4a3ca31ec5fb9a0ad9b82b3aaf618051a58f0c"
     },
     "core/src/main/kotlin/keiyoushi/utils/WebView.kt": {
       "mode": "100644",
-      "sha": "b98710c4172cac73fd3150324ec7ea1d87689892"
+      "sha": "461a837fc7f243029e7d861487a3cb15300710a7"
     },
     "core/src/main/kotlin/keiyoushi/utils/protobuf/ProtobufDecoder.kt": {
       "mode": "100644",
@@ -198,7 +198,7 @@
     },
     "core/src/main/kotlin/keiyoushi/utils/ui/ActivityTracker.kt": {
       "mode": "100644",
-      "sha": "2451df4b0fb54b4dedc5c55d3a62aec090f1b1a6"
+      "sha": "e938e0e1cf3e48119c9dbe14bad510439efc008e"
     },
     "core/src/main/kotlin/keiyoushi/utils/ui/DialogHelper.kt": {
       "mode": "100644",
@@ -382,15 +382,15 @@
     },
     "gradle/build-logic/src/main/kotlin/AndroidBasePlugin.kt": {
       "mode": "100644",
-      "sha": "a70ea54397673175ae41bfd1b7ea5033cfc6d17d"
+      "sha": "0630f9e7a95a99b08e30acb154c4c11b0409e570"
     },
     "gradle/build-logic/src/main/kotlin/ExtensionPlugin.kt": {
       "mode": "100644",
-      "sha": "22722a294ba9e783065780c40edfa9d56c1dd8dd"
+      "sha": "dc6ac848b0dda111cab9aae43e2bef3d705da463"
     },
     "gradle/build-logic/src/main/kotlin/LibraryPlugin.kt": {
       "mode": "100644",
-      "sha": "62714d0e005a695353f51cd227ae3dcff6190191"
+      "sha": "801048dc790f98c7aa30ea3aef5e6d2f5a891ffa"
     },
     "gradle/build-logic/src/main/kotlin/SpotlessPlugin.kt": {
       "mode": "100644",
@@ -398,7 +398,7 @@
     },
     "gradle/build-logic/src/main/kotlin/ThemePlugin.kt": {
       "mode": "100644",
-      "sha": "2cad476aa7a98632aaa791b113fb911e0c3ea9d6"
+      "sha": "0f0e960f8034321ab3e845b005930333ff474e29"
     },
     "gradle/build-logic/src/main/kotlin/io/github/keiyoushi/gradle/api/ContentWarning.kt": {
       "mode": "100644",
@@ -450,7 +450,7 @@
     },
     "gradle/build-logic/src/main/kotlin/io/github/keiyoushi/gradle/internal/extensions/DependencyHandlerScope.kt": {
       "mode": "100644",
-      "sha": "f8c6bc6d76157b53d2157fbf6abcc412fc55cfe5"
+      "sha": "9e1eedd8e974a6110c372d075bd5edaa0f9b3e28"
     },
     "gradle/build-logic/src/main/kotlin/io/github/keiyoushi/gradle/internal/extensions/PluginManager.kt": {
       "mode": "100644",
@@ -486,7 +486,7 @@
     },
     "gradle/libs.versions.toml": {
       "mode": "100644",
-      "sha": "32cbbed5273156a6d7dc2aa453c203b21cc36263"
+      "sha": "cfe6fc77fa1b479711ad72229db3890614eb7fbc"
     },
     "gradle/wrapper/gradle-wrapper.jar": {
       "mode": "100644",
@@ -578,7 +578,7 @@
     },
     "settings.gradle.kts": {
       "mode": "100644",
-      "sha": "a4a7ad5ba715f32fef83b4aaefd382da54f742e5"
+      "sha": "6ce1b9cb24295912ec904dc3beb2e2c6499cdd33"
     },
     "src/fr/animesama/build.gradle.kts": {
       "mode": "100644",
@@ -742,5 +742,5 @@
     }
   },
   "repository": "keiyoushi/extensions-source",
-  "revision": "02402ef9c33bcf23405cf6214c33ab160917a4c0"
+  "revision": "f1d882a93ef34a33dc4f4467753ad5f99eab43f4"
 }
