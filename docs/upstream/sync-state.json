@@ -42,7 +42,7 @@
     },
     "compiler/src/main/kotlin/keiyoushi/processor/SourceProcessor.kt": {
       "mode": "100644",
-      "sha": "b34cec630b10146330dc138c43b0cf0477044e14"
+      "sha": "28a00fc42b91369ea7c195187d0edf282c7fd0f5"
     },
     "compiler/src/main/resources/META-INF/services/com.google.devtools.ksp.processing.SymbolProcessorProvider": {
       "mode": "100644",
@@ -106,7 +106,7 @@
     },
     "core/src/main/kotlin/keiyoushi/source/MirrorPreferences.kt": {
       "mode": "100644",
-      "sha": "ec0ccbee357fd269a5d38449f55ff03e669a6c66"
+      "sha": "7da6a30dc3528e6204c21df15a22252f3944d488"
     },
     "core/src/main/kotlin/keiyoushi/source/UrlActivity.kt": {
       "mode": "100644",
@@ -526,7 +526,7 @@
     },
     "lib-multisrc/madara/build.gradle.kts": {
       "mode": "100644",
-      "sha": "3c988a26edb13260fa4cfcb1bc7e4757e3b0fd1a"
+      "sha": "98aaa6aecd290a3e56c7700614fc61573881d603"
     },
     "lib-multisrc/madara/res/mipmap-hdpi/ic_launcher.png": {
       "mode": "100644",
@@ -554,11 +554,11 @@
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/Madara.kt": {
       "mode": "100644",
-      "sha": "f9c115a834c77a0e95d32ffa1cfbd74635bd9ae6"
+      "sha": "4aa604d235eff3bdb569e5db888dccfbce6f1fa1"
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/MadaraBase.kt": {
       "mode": "100644",
-      "sha": "9fa0010831648c29df7f14d7cd3d73bfa531173f"
+      "sha": "399f3754e9e47fe18b131f022afe85225ccd79b9"
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/MadaraNoAjax.kt": {
       "mode": "100644",
@@ -566,7 +566,7 @@
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/Models.kt": {
       "mode": "100644",
-      "sha": "3cb3d1f4ca19e05d4243b7cdb83ae86447292f13"
+      "sha": "c76670a30d95fcebaa13386ce2c575794da03347"
     },
     "lib/i18n/build.gradle.kts": {
       "mode": "100644",
@@ -742,5 +742,5 @@
     }
   },
   "repository": "keiyoushi/extensions-source",
-  "revision": "f1d882a93ef34a33dc4f4467753ad5f99eab43f4"
+  "revision": "ef952a64df831c33c29c276d9c283b4cd7633ce1"
 }
