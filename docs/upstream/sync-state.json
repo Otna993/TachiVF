@@ -576,6 +576,74 @@
       "mode": "100644",
       "sha": "0f3c89a4e1ff285ecf354e8b69468ae303aa056c"
     },
+    "lint-rules/build.gradle.kts": {
+      "mode": "100644",
+      "sha": "85765bd8fc00e47d86306b4fd782e31aa5538c6f"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/KeiIssueRegistry.kt": {
+      "mode": "100644",
+      "sha": "b84d840c3a24dec637d87cd937fabacff6f1fcd7"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/Util.kt": {
+      "mode": "100644",
+      "sha": "2b641c0ab3465c63790765089f42f55bad62dfd1"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/BuildScriptDetector.kt": {
+      "mode": "100644",
+      "sha": "53f584ec4c892dafdbe2c42e08532921ac5785f5"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/ContentDetector.kt": {
+      "mode": "100644",
+      "sha": "78edc6874ec5017d45c51638faa76d6a1848affa"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/DateTimeDetector.kt": {
+      "mode": "100644",
+      "sha": "8a67e9c30a95372f9156021cb5d107d4a18e35ce"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/FlowDetector.kt": {
+      "mode": "100644",
+      "sha": "0ad8ab0fbadcbeef53187acc47a9578b596d9c03"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/IconDetector.kt": {
+      "mode": "100644",
+      "sha": "c2dca154b53f5e67f5e9491ddaf173ff9d32933c"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/JsonDetector.kt": {
+      "mode": "100644",
+      "sha": "15b2258d497895cca29a082731d49f2c6e8c530d"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/JsoupDetector.kt": {
+      "mode": "100644",
+      "sha": "3206977d8afa1cc47fe340bfffd6026401e211e2"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/KotlinIdiomDetector.kt": {
+      "mode": "100644",
+      "sha": "07f98188376ae0242ed22699f06237f44954da84"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/NetworkDetector.kt": {
+      "mode": "100644",
+      "sha": "d819842091966698d25e72ecfceceacc27b7df2f"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/SourceDetector.kt": {
+      "mode": "100644",
+      "sha": "49a999c80a38e9a4b707307d3390ad876565e7d9"
+    },
+    "lint-rules/src/main/resources/META-INF/services/com.android.tools.lint.client.api.IssueRegistry": {
+      "mode": "100644",
+      "sha": "837e6bbb8afefe26a1c245ab9300da92a3b7b4dd"
+    },
+    "lint-rules/src/test/kotlin/keiyoushi/lint/DetectorsTest.kt": {
+      "mode": "100644",
+      "sha": "fa35c4f8bf9477a9ee47d6f91a9958bc885407db"
+    },
+    "lint-rules/src/test/kotlin/keiyoushi/lint/ResourcesTest.kt": {
+      "mode": "100644",
+      "sha": "9fc90f6ba845847dab527a4dcd5c20a4d535ccfa"
+    },
+    "lint-rules/src/test/kotlin/keiyoushi/lint/Stubs.kt": {
+      "mode": "100644",
+      "sha": "061dce574bde3306841c328eafb354c6017eabb3"
+    },
     "settings.gradle.kts": {
       "mode": "100644",
       "sha": "6ce1b9cb24295912ec904dc3beb2e2c6499cdd33"

@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REPOSITORY = 'keiyoushi/extensions-source'
 STATE = 'docs/upstream/sync-state.json'
 MODULES = ('animesama', 'aniverse', 'japscan', 'mangakawaii', 'mangascantrad')
-DIRECTORIES = tuple('src/fr/' + module for module in MODULES) + ('lib-multisrc/madara', 'lib/i18n', 'core', 'compiler', 'common', 'gradle')
+DIRECTORIES = tuple('src/fr/' + module for module in MODULES) + ('lib-multisrc/madara', 'lib/i18n', 'core', 'compiler', 'common', 'gradle', 'lint-rules')
 FILES = ('.editorconfig', '.gitattributes', '.gitignore', 'AGENTS.md', 'CONTRIBUTING.md', 'LICENSE', 'build.gradle.kts', 'gradle.properties', 'settings.gradle.kts', 'gradlew', 'gradlew.bat', 'ext-bootstrap.py', 'ktlintCodeStyle.xml')
 
 
