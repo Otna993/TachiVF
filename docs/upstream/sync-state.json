@@ -18,7 +18,7 @@
     },
     "CONTRIBUTING.md": {
       "mode": "100644",
-      "sha": "5f9a2cfcbd921e34f7242f17c6ea6f7ad994da09"
+      "sha": "b5d0a2e0719a9c3bbfbf18867884ad299c47ef2a"
     },
     "LICENSE": {
       "mode": "100644",
@@ -102,11 +102,15 @@
     },
     "core/src/main/kotlin/keiyoushi/source/KeiSource.kt": {
       "mode": "100644",
-      "sha": "ac08e41c0e36038a1c90d70c7ca2c8f2b7e36cea"
+      "sha": "5372ca0363544fee6f127d66c39853e1ab58a9d0"
     },
     "core/src/main/kotlin/keiyoushi/source/MirrorPreferences.kt": {
       "mode": "100644",
       "sha": "7da6a30dc3528e6204c21df15a22252f3944d488"
+    },
+    "core/src/main/kotlin/keiyoushi/source/SMangaUpdate.kt": {
+      "mode": "100644",
+      "sha": "3b9e51a0e3f6883e740bc352d2f2eb524f8efadd"
     },
     "core/src/main/kotlin/keiyoushi/source/UrlActivity.kt": {
       "mode": "100644",
@@ -362,7 +366,7 @@
     },
     "ext-bootstrap.py": {
       "mode": "100755",
-      "sha": "eb1b2d7d4da2b82feee7610e3844a779054fb84d"
+      "sha": "8eb3af37be139b7e9ce69587fe39c44d3a24050a"
     },
     "gradle.properties": {
       "mode": "100644",
@@ -486,7 +490,7 @@
     },
     "gradle/libs.versions.toml": {
       "mode": "100644",
-      "sha": "cfe6fc77fa1b479711ad72229db3890614eb7fbc"
+      "sha": "6ddc83003ca0cc73aa06eea6bccf20f0996b7258"
     },
     "gradle/wrapper/gradle-wrapper.jar": {
       "mode": "100644",
@@ -494,7 +498,7 @@
     },
     "gradle/wrapper/gradle-wrapper.properties": {
       "mode": "100644",
-      "sha": "04d7959523bb789fac2c02ec57272eca3de5cf5a"
+      "sha": "d0d1a39c1f537238813e3f36df7524a05d7f6765"
     },
     "gradlew": {
       "mode": "100755",
@@ -558,7 +562,7 @@
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/MadaraBase.kt": {
       "mode": "100644",
-      "sha": "399f3754e9e47fe18b131f022afe85225ccd79b9"
+      "sha": "7ed88d967b71fb1dc8ab1441f129f2fc31db7570"
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/MadaraNoAjax.kt": {
       "mode": "100644",
@@ -575,6 +579,74 @@
     "lib/i18n/src/keiyoushi/lib/i18n/Intl.kt": {
       "mode": "100644",
       "sha": "0f3c89a4e1ff285ecf354e8b69468ae303aa056c"
+    },
+    "lint-rules/build.gradle.kts": {
+      "mode": "100644",
+      "sha": "85765bd8fc00e47d86306b4fd782e31aa5538c6f"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/KeiIssueRegistry.kt": {
+      "mode": "100644",
+      "sha": "b84d840c3a24dec637d87cd937fabacff6f1fcd7"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/Util.kt": {
+      "mode": "100644",
+      "sha": "2b641c0ab3465c63790765089f42f55bad62dfd1"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/BuildScriptDetector.kt": {
+      "mode": "100644",
+      "sha": "53f584ec4c892dafdbe2c42e08532921ac5785f5"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/ContentDetector.kt": {
+      "mode": "100644",
+      "sha": "78edc6874ec5017d45c51638faa76d6a1848affa"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/DateTimeDetector.kt": {
+      "mode": "100644",
+      "sha": "8a67e9c30a95372f9156021cb5d107d4a18e35ce"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/FlowDetector.kt": {
+      "mode": "100644",
+      "sha": "0ad8ab0fbadcbeef53187acc47a9578b596d9c03"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/IconDetector.kt": {
+      "mode": "100644",
+      "sha": "c2dca154b53f5e67f5e9491ddaf173ff9d32933c"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/JsonDetector.kt": {
+      "mode": "100644",
+      "sha": "15b2258d497895cca29a082731d49f2c6e8c530d"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/JsoupDetector.kt": {
+      "mode": "100644",
+      "sha": "3206977d8afa1cc47fe340bfffd6026401e211e2"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/KotlinIdiomDetector.kt": {
+      "mode": "100644",
+      "sha": "07f98188376ae0242ed22699f06237f44954da84"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/NetworkDetector.kt": {
+      "mode": "100644",
+      "sha": "d819842091966698d25e72ecfceceacc27b7df2f"
+    },
+    "lint-rules/src/main/kotlin/keiyoushi/lint/detectors/SourceDetector.kt": {
+      "mode": "100644",
+      "sha": "49a999c80a38e9a4b707307d3390ad876565e7d9"
+    },
+    "lint-rules/src/main/resources/META-INF/services/com.android.tools.lint.client.api.IssueRegistry": {
+      "mode": "100644",
+      "sha": "837e6bbb8afefe26a1c245ab9300da92a3b7b4dd"
+    },
+    "lint-rules/src/test/kotlin/keiyoushi/lint/DetectorsTest.kt": {
+      "mode": "100644",
+      "sha": "fa35c4f8bf9477a9ee47d6f91a9958bc885407db"
+    },
+    "lint-rules/src/test/kotlin/keiyoushi/lint/ResourcesTest.kt": {
+      "mode": "100644",
+      "sha": "9fc90f6ba845847dab527a4dcd5c20a4d535ccfa"
+    },
+    "lint-rules/src/test/kotlin/keiyoushi/lint/Stubs.kt": {
+      "mode": "100644",
+      "sha": "061dce574bde3306841c328eafb354c6017eabb3"
     },
     "settings.gradle.kts": {
       "mode": "100644",
@@ -606,7 +678,7 @@
     },
     "src/fr/animesama/src/eu/kanade/tachiyomi/extension/fr/animesama/AnimeSama.kt": {
       "mode": "100644",
-      "sha": "18e967c24689d0e1a0cbbd5b5cdbddb5a879f4de"
+      "sha": "340de26f3a5842cbe55d5266391a734d19f57d75"
     },
     "src/fr/animesama/src/eu/kanade/tachiyomi/extension/fr/animesama/Filters.kt": {
       "mode": "100644",
@@ -638,7 +710,7 @@
     },
     "src/fr/aniverse/src/eu/kanade/tachiyomi/extension/fr/aniverse/Aniverse.kt": {
       "mode": "100644",
-      "sha": "1ca135c1bb1ccbf40a5ed6fdaa2bc72816c1e0f3"
+      "sha": "952ac0d8398b9ebcf4887cd35bfd0514db6e485e"
     },
     "src/fr/aniverse/src/eu/kanade/tachiyomi/extension/fr/aniverse/Dto.kt": {
       "mode": "100644",
@@ -674,7 +746,7 @@
     },
     "src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan.kt": {
       "mode": "100644",
-      "sha": "8eee14cd90e169f92234a428b6b68b2131d1ee9b"
+      "sha": "84e338678c3d03b7d6ad7b03ce6283dc53174fb2"
     },
     "src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/ReaderScripts.kt": {
       "mode": "100644",
@@ -710,7 +782,7 @@
     },
     "src/fr/mangakawaii/src/eu/kanade/tachiyomi/extension/fr/mangakawaii/MangaKawaii.kt": {
       "mode": "100644",
-      "sha": "169e1fdd8fcedb63c59d3d541c56451dac7d2275"
+      "sha": "6ecab591a1b45d50349d7b195cdba4ed5a179f15"
     },
     "src/fr/mangascantrad/build.gradle.kts": {
       "mode": "100644",
@@ -742,5 +814,5 @@
     }
   },
   "repository": "keiyoushi/extensions-source",
-  "revision": "ef952a64df831c33c29c276d9c283b4cd7633ce1"
+  "revision": "b4f9106a5994790caef12a7744c85fb43c9b9249"
 }

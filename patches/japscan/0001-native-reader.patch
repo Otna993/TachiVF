@@ -1,7 +1,8 @@
 diff --git a/src/fr/japscan/build.gradle.kts b/src/fr/japscan/build.gradle.kts
+index 2cbf63884192eb5da972297409b58874440e2e75..0a37ede379565eaefadf20ab28a21e0180318bf7 100644
 --- a/src/fr/japscan/build.gradle.kts
 +++ b/src/fr/japscan/build.gradle.kts
-@@ -16,3 +16,32 @@
+@@ -16,3 +16,32 @@ keiyoushi {
          id = 11L
      }
  }
@@ -35,6 +36,7 @@ diff --git a/src/fr/japscan/build.gradle.kts b/src/fr/japscan/build.gradle.kts
 +    enabled = false
 +}
 diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan.kt b/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan.kt
+index 84e338678c3d03b7d6ad7b03ce6283dc53174fb2..5ce142c4c09b465b19664185afaaf2f197db6cfb 100644
 --- a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan.kt
 +++ b/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan.kt
 @@ -1,9 +1,5 @@
@@ -47,8 +49,8 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
  import androidx.preference.ListPreference
  import androidx.preference.PreferenceScreen
  import eu.kanade.tachiyomi.source.ConfigurableSource
-@@ -15,38 +11,26 @@
- import eu.kanade.tachiyomi.source.model.SMangaUpdate
+@@ -14,40 +10,27 @@ import eu.kanade.tachiyomi.source.model.SChapter
+ import eu.kanade.tachiyomi.source.model.SManga
  import keiyoushi.annotation.Source
  import keiyoushi.network.Fetch
 +import keiyoushi.network.fetch
@@ -56,6 +58,7 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
  import keiyoushi.network.post
  import keiyoushi.network.rateLimit
  import keiyoushi.source.KeiSource
+ import keiyoushi.source.SMangaUpdate
 -import keiyoushi.utils.applicationContext
  import keiyoushi.utils.asJsoup
  import keiyoushi.utils.getPreferencesLazy
@@ -82,13 +85,14 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
  import java.time.ZoneId
  import java.time.format.DateTimeFormatter
  import java.util.Locale
+-import java.util.concurrent.Executors
 -import kotlin.time.Duration.Companion.hours
 -import kotlin.time.Duration.Companion.milliseconds
 -import kotlin.time.Duration.Companion.minutes
  import kotlin.time.Duration.Companion.seconds
  
  @Source
-@@ -55,20 +39,7 @@
+@@ -56,20 +39,7 @@ abstract class Japscan :
      ConfigurableSource {
      private val preferences by getPreferencesLazy()
  
@@ -110,7 +114,7 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
  
      // Sometimes an adblock blocker will pop up, preventing the user from opening
      // a cloudflare protected page
-@@ -238,175 +209,22 @@
+@@ -239,181 +209,22 @@ abstract class Japscan :
          }
      }
  
@@ -178,7 +182,11 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
 -                context.startActivity(closeIntent)
 -                return
 -            }
--        }
++        val chapterUrl = getChapterUrl(chapter)
++        val document = client.get(chapterUrl, Fetch.DOCUMENT, CacheControl.FORCE_NETWORK).asJsoup()
++        check(document.select("script:not([src])").none { CAPTCHA_REGEX.containsMatchIn(it.data()) }) {
++            "Résolvez le captcha de ce chapitre dans la WebView, attendez les images, puis revenez au lecteur et actualisez une fois."
+         }
 -        throw Exception("Résolvez le captcha, fermez la Webview et réouvrez le chapitre.")
 -    }
 -
@@ -193,9 +201,11 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
 -                poll(200.milliseconds) { if (finished) resolve(Unit) }
 -                loadData(baseUrl, response.body.string())
 -            }
--        }
--    }
--
++        return parseReaderPages(document, chapterUrl).mapIndexed { index, image ->
++            Page(index, url = chapterUrl, imageUrl = image)
+         }
+     }
+ 
 -    private suspend fun runReaderWebView(
 -        chapterUrl: String,
 -        isWebtoon: Boolean,
@@ -207,8 +217,10 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
 -        var done = false
 -
 -        val response = client.get(chapterUrl, Fetch.DOCUMENT)
+-        // Pages are saved off the main thread, in order, and passDone queues behind them
+-        val saver = Executors.newSingleThreadExecutor()
 -
--        return runCatching {
+-        val pages = runCatching {
 -            runWebView<List<String>>(timeout = 3.minutes) {
 -                domStorageEnabled = true
 -                javaScriptEnabled = true
@@ -219,13 +231,16 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
 -                    loadWithOverviewMode = false
 -                }
 -
--                jsBridge("${interfaceName}_savePage") { dataUri ->
--                    savePage(dataUri, sessionTag, savedPaths.size)?.let(savedPaths::add)
+-                val origins = setOf(baseUrl)
+-                webMessageBridge("${interfaceName}_savePage", origins) { dataUri ->
+-                    saver.execute { savePage(dataUri, sessionTag, savedPaths.size)?.let(savedPaths::add) }
 -                }
 -
--                jsBridge("${interfaceName}_passDone") {
--                    done = true
--                    resolve(savedPaths)
+-                webMessageBridge("${interfaceName}_passDone", origins) {
+-                    saver.execute {
+-                        done = true
+-                        resolve(savedPaths)
+-                    }
 -                }
 -
 -                // The reader pulls rotating ad hosts whose modals break the detached descrambler,
@@ -252,7 +267,8 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
 -                loadData(chapterUrl, response.body.string())
 -            }
 -        }.getOrElse { emptyList() }
--            .takeIf { done } ?: emptyList()
+-        saver.shutdown()
+-        return pages.takeIf { done } ?: emptyList()
 -    }
 -
 -    private fun savePage(
@@ -283,16 +299,6 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
 -        val charPool = ('a'..'z') + ('A'..'Z')
 -        return List(length) { charPool.random() }.joinToString("")
 -    }
-+        val chapterUrl = getChapterUrl(chapter)
-+        val document = client.get(chapterUrl, Fetch.DOCUMENT, CacheControl.FORCE_NETWORK).asJsoup()
-+        check(document.select("script:not([src])").none { CAPTCHA_REGEX.containsMatchIn(it.data()) }) {
-+            "Résolvez le captcha de ce chapitre dans la WebView, attendez les images, puis revenez au lecteur et actualisez une fois."
-+        }
-+        return parseReaderPages(document, chapterUrl).mapIndexed { index, image ->
-+            Page(index, url = chapterUrl, imageUrl = image)
-+        }
-+    }
-+
 +    override fun getImageRequest(page: Page): Request = Request.Builder()
 +        .url(page.imageUrl!!)
 +        .headers(headers)
@@ -301,7 +307,7 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
  
      override fun setupPreferenceScreen(screen: PreferenceScreen) {
          ListPreference(screen.context).apply {
-@@ -458,26 +276,5 @@
+@@ -465,26 +276,5 @@ abstract class Japscan :
  
          private const val SHOW_SPOILER_CHAPTERS_TITLE = "Les chapitres en Anglais ou non traduit sont upload en tant que \" Spoilers \" sur Japscan"
          private const val SHOW_SPOILER_CHAPTERS = "JAPSCAN_SPOILER_CHAPTERS"
@@ -330,6 +336,7 @@ diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan
  }
 diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/JapscanReader.kt b/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/JapscanReader.kt
 new file mode 100644
+index 0000000000000000000000000000000000000000..5049abf0707104d172064c3238c026e3cfd0bd27
 --- /dev/null
 +++ b/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/JapscanReader.kt
 @@ -0,0 +1,89 @@
@@ -424,6 +431,7 @@ new file mode 100644
 +private val SUBSTITUTION_OUTPUT = "17T6Cpaiguz5HlwUJc20KfshvLxmEGNX4AI8QePdD3YbZRW9nVMFkryOBqSotj".reversed()
 diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/ReaderScripts.kt b/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/ReaderScripts.kt
 deleted file mode 100644
+index 8c955bc4f1788064894e341275b9643514bf809a..0000000000000000000000000000000000000000
 --- a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/ReaderScripts.kt
 +++ /dev/null
 @@ -1,646 +0,0 @@
@@ -686,7 +694,7 @@ deleted file mode 100644
 -                                                fr.readAsDataURL(b);
 -                                            });
 -                                            if (typeof d === 'string' && d.indexOf('data:image/') === 0) {
--                                                window.$${interfaceName}_savePage.post(d);
+-                                                window.$${interfaceName}_savePage.postMessage(d);
 -                                                return true;
 -                                            }
 -                                        } catch(e) {
@@ -773,7 +781,7 @@ deleted file mode 100644
 -
 -                                    console.log('[japscan] done, ' + saved + ' / ' + total + ' pages saved');
 -                                    try {
--                                        window.$${interfaceName}_passDone.post("");
+-                                        window.$${interfaceName}_passDone.postMessage("");
 -                                    } catch(e) {
 -                                        console.log('[japscan] passDone failed: ' + e);
 -                                    }
@@ -1017,7 +1025,7 @@ deleted file mode 100644
 -                                            var uri = tileToDataUri(tile);
 -                                            if (!uri) continue;
 -                                            try {
--                                                window.$${interfaceName}_savePage.post(uri);
+-                                                window.$${interfaceName}_savePage.postMessage(uri);
 -                                                savedHosts.add(tile.host);
 -                                                saved++;
 -                                                tilesEmitted++;
@@ -1059,7 +1067,7 @@ deleted file mode 100644
 -                                        dImgContainers[i] = null;
 -                                    }
 -                                    window.__jlog('[japscan] webtoon done, ' + tilesEmitted + ' tile(s) saved across ' + total + ' d-img containers');
--                                    try { window.$${interfaceName}_passDone.post(""); } catch(e) {}
+-                                    try { window.$${interfaceName}_passDone.postMessage(""); } catch(e) {}
 -                                    return;
 -                                }
 -
@@ -1070,11 +1078,12 @@ deleted file mode 100644
 -                                // work; if this ever fires, the fix is to reload the WebView with
 -                                // the paginated hooks, not a third capture technique.
 -                                window.__jlog('[japscan] MISMATCH: url hinted webtoon but the DOM mounted the paginated reader — giving up');
--                                try { window.$${interfaceName}_passDone.post(""); } catch(e) {}
+-                                try { window.$${interfaceName}_passDone.postMessage(""); } catch(e) {}
 -                            })();
 -""".trimIndent()
 diff --git a/src/fr/japscan/test-resources/japscan/reader-without-probe.html b/src/fr/japscan/test-resources/japscan/reader-without-probe.html
 new file mode 100644
+index 0000000000000000000000000000000000000000..fe978b30c6db4dfccb4748eb5894b7e5f0a9c880
 --- /dev/null
 +++ b/src/fr/japscan/test-resources/japscan/reader-without-probe.html
 @@ -0,0 +1,31 @@
@@ -1111,6 +1120,7 @@ new file mode 100644
 +</body></html>
 diff --git a/src/fr/japscan/test-resources/japscan/reader.html b/src/fr/japscan/test-resources/japscan/reader.html
 new file mode 100644
+index 0000000000000000000000000000000000000000..545c6c750616da519425120144517484945f1c03
 --- /dev/null
 +++ b/src/fr/japscan/test-resources/japscan/reader.html
 @@ -0,0 +1,31 @@
@@ -1147,6 +1157,7 @@ new file mode 100644
 +</body></html>
 diff --git a/src/fr/japscan/test/eu/kanade/tachiyomi/extension/fr/japscan/JapscanReaderTest.kt b/src/fr/japscan/test/eu/kanade/tachiyomi/extension/fr/japscan/JapscanReaderTest.kt
 new file mode 100644
+index 0000000000000000000000000000000000000000..705f8439ddede43866dc5ffbc3d2f72c2092cba9
 --- /dev/null
 +++ b/src/fr/japscan/test/eu/kanade/tachiyomi/extension/fr/japscan/JapscanReaderTest.kt
 @@ -0,0 +1,76 @@
