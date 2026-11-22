@@ -36,7 +36,7 @@ index 2cbf63884192eb5da972297409b58874440e2e75..0a37ede379565eaefadf20ab28a21e01
 +    enabled = false
 +}
 diff --git a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan.kt b/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan.kt
-index 8eee14cd90e169f92234a428b6b68b2131d1ee9b..6d5f9e902b1accfc9b7fde4eb54d81956c767b15 100644
+index 84e338678c3d03b7d6ad7b03ce6283dc53174fb2..5ce142c4c09b465b19664185afaaf2f197db6cfb 100644
 --- a/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan.kt
 +++ b/src/fr/japscan/src/eu/kanade/tachiyomi/extension/fr/japscan/Japscan.kt
 @@ -1,9 +1,5 @@
@@ -49,8 +49,8 @@ index 8eee14cd90e169f92234a428b6b68b2131d1ee9b..6d5f9e902b1accfc9b7fde4eb54d8195
  import androidx.preference.ListPreference
  import androidx.preference.PreferenceScreen
  import eu.kanade.tachiyomi.source.ConfigurableSource
-@@ -15,39 +11,26 @@ import eu.kanade.tachiyomi.source.model.SManga
- import eu.kanade.tachiyomi.source.model.SMangaUpdate
+@@ -14,40 +10,27 @@ import eu.kanade.tachiyomi.source.model.SChapter
+ import eu.kanade.tachiyomi.source.model.SManga
  import keiyoushi.annotation.Source
  import keiyoushi.network.Fetch
 +import keiyoushi.network.fetch
@@ -58,6 +58,7 @@ index 8eee14cd90e169f92234a428b6b68b2131d1ee9b..6d5f9e902b1accfc9b7fde4eb54d8195
  import keiyoushi.network.post
  import keiyoushi.network.rateLimit
  import keiyoushi.source.KeiSource
+ import keiyoushi.source.SMangaUpdate
 -import keiyoushi.utils.applicationContext
  import keiyoushi.utils.asJsoup
  import keiyoushi.utils.getPreferencesLazy
