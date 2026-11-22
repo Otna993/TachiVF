@@ -1,12 +1,12 @@
 {
-  "apk/tachiyomi-fr.animesama-v1.6.2.apk": "a2a8671d297eaa45ccbaddbae8425c0b986ac843520903e02af96c9318945572",
-  "apk/tachiyomi-fr.aniverse-v1.6.4.apk": "2d6ed44168a7d4ead36151e1ea89db5dfd9e778157094ad39cb116f1e21589b7",
-  "apk/tachiyomi-fr.japscan-v1.6.5.apk": "3ec17fc3c8d10f6d97796e31d959f27de25dd404903a39c152df0b06ba43ce73",
-  "apk/tachiyomi-fr.mangakawaii-v1.6.2.apk": "d8079d186d686be6891bcf0008936f01d5559ffabd37741e6d6e03981c1b1b24",
-  "apk/tachiyomi-fr.mangascantrad-v1.6.62.apk": "25e3d214ba1acab1a64f22da46ae4d8fe7eb4668017f9ffcb33fe04ea5ceefd6",
-  "jar/tachiyomi-fr.animesama-v1.6.2.jar": "7909fc6336f3ce7123f436ee2d92d8eae08de0dcce077b11a99873d9290ce704",
-  "jar/tachiyomi-fr.aniverse-v1.6.4.jar": "093ab8634e9de06c90c27b53f3e5aa9e0a77e1d49048f310abb1b593f6339ccb",
-  "jar/tachiyomi-fr.japscan-v1.6.5.jar": "6b0964a8ba9edc6985a6d506d68f9a1e293520f9e7ecd2c90d7adf8e8c1b1b62",
-  "jar/tachiyomi-fr.mangakawaii-v1.6.2.jar": "faa7b0878325ed48ef3373aaf29e3c60bfa7725d51cc245a8f2b95ac20361780",
-  "jar/tachiyomi-fr.mangascantrad-v1.6.62.jar": "628119b5fe1211322e7039b3ffb9a23ade109f238f853a565ceefd212663c9b1"
+  "apk/tachiyomi-fr.animesama-v1.6.2.apk": "38b71da0b05fd3ad5a02fba432af47f3648f9a06eea83255220d1a13f3e68648",
+  "apk/tachiyomi-fr.aniverse-v1.6.4.apk": "4f083b17fd85ea96591d88913f49d009b2c0b2b328c7370573f5c81759ef4a94",
+  "apk/tachiyomi-fr.japscan-v1.6.6.apk": "6dd3ea56174c86425e3d8d8e65a59f52113a5c959a64b13e86f95542f9f4ff7c",
+  "apk/tachiyomi-fr.mangakawaii-v1.6.2.apk": "4b71dfefc5867134033a4d9705179cc8391d3c3983cdc39e03698a4f69a882dd",
+  "apk/tachiyomi-fr.mangascantrad-v1.6.64.apk": "ca270926d729f8e9ef23d5fcf055c1a9984ac238096cb4fd1db3290067f8154f",
+  "jar/tachiyomi-fr.animesama-v1.6.2.jar": "d569a316fe30697187a15fd5628729340bf7deea80efa87b24225f822dccdb61",
+  "jar/tachiyomi-fr.aniverse-v1.6.4.jar": "3951004a21b6317b829e4c3cc33cfbbdf73ccc494b6ca9fa8a55cdfb02064b82",
+  "jar/tachiyomi-fr.japscan-v1.6.6.jar": "0c4ea4082a107a9b335bd51fc3176b4f141955c77aceddccac015b684f01c968",
+  "jar/tachiyomi-fr.mangakawaii-v1.6.2.jar": "a19f48927ad23540207bea06e2039a34c0879521b0f9181ddaa2452b102fbc71",
+  "jar/tachiyomi-fr.mangascantrad-v1.6.64.jar": "96c4bba0abc4d3c7039e5a59ca8e33ab68633b008a9346f3f724010eddaa9f98"
 }
