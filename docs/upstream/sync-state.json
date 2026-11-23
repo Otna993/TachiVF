@@ -654,7 +654,7 @@
     },
     "src/fr/animesama/build.gradle.kts": {
       "mode": "100644",
-      "sha": "f2c388f6584fee84d486d33e82d323a5113ecc3c"
+      "sha": "1dc46886026fb3f64cecfacfc51815f9b35dc2a3"
     },
     "src/fr/animesama/res/mipmap-hdpi/ic_launcher.png": {
       "mode": "100644",
@@ -678,7 +678,7 @@
     },
     "src/fr/animesama/src/eu/kanade/tachiyomi/extension/fr/animesama/AnimeSama.kt": {
       "mode": "100644",
-      "sha": "340de26f3a5842cbe55d5266391a734d19f57d75"
+      "sha": "4a6d97a77981ded8d4eff0c8c070f3198de62442"
     },
     "src/fr/animesama/src/eu/kanade/tachiyomi/extension/fr/animesama/Filters.kt": {
       "mode": "100644",
@@ -814,5 +814,5 @@
     }
   },
   "repository": "keiyoushi/extensions-source",
-  "revision": "b4f9106a5994790caef12a7744c85fb43c9b9249"
+  "revision": "582615a352e38380378cb3f3c3001b0fa7897fe9"
 }
