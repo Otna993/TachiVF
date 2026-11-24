@@ -18,7 +18,7 @@
     },
     "CONTRIBUTING.md": {
       "mode": "100644",
-      "sha": "b5d0a2e0719a9c3bbfbf18867884ad299c47ef2a"
+      "sha": "672681d21769afdfa3f67a35f02dbca8bbc30953"
     },
     "LICENSE": {
       "mode": "100644",
@@ -106,7 +106,7 @@
     },
     "core/src/main/kotlin/keiyoushi/source/MirrorPreferences.kt": {
       "mode": "100644",
-      "sha": "7da6a30dc3528e6204c21df15a22252f3944d488"
+      "sha": "b92c3dd02b566d06f48833caa12f0a8459ec7635"
     },
     "core/src/main/kotlin/keiyoushi/source/SMangaUpdate.kt": {
       "mode": "100644",
@@ -182,7 +182,7 @@
     },
     "core/src/main/kotlin/keiyoushi/utils/WebView.kt": {
       "mode": "100644",
-      "sha": "461a837fc7f243029e7d861487a3cb15300710a7"
+      "sha": "ee29e1baa3283ec60ba01c6e53fc8f70990d2d4f"
     },
     "core/src/main/kotlin/keiyoushi/utils/protobuf/ProtobufDecoder.kt": {
       "mode": "100644",
@@ -292,6 +292,10 @@
       "mode": "100644",
       "sha": "088cff8eefd006094d9f9653ea8d35421e657172"
     },
+    "core/src/test/kotlin/keiyoushi/source/MirrorPreferencesTest.kt": {
+      "mode": "100644",
+      "sha": "529c0259ac2fd14c9bb76518a299ac2776a89a93"
+    },
     "core/src/test/kotlin/keiyoushi/utils/CryptoTest.kt": {
       "mode": "100644",
       "sha": "64ed1bd00474950fd3838330094f02a00f6959bb"
@@ -390,11 +394,11 @@
     },
     "gradle/build-logic/src/main/kotlin/ExtensionPlugin.kt": {
       "mode": "100644",
-      "sha": "dc6ac848b0dda111cab9aae43e2bef3d705da463"
+      "sha": "f13053a72055ae9933645c1f1e4b18b679d0ddee"
     },
     "gradle/build-logic/src/main/kotlin/LibraryPlugin.kt": {
       "mode": "100644",
-      "sha": "801048dc790f98c7aa30ea3aef5e6d2f5a891ffa"
+      "sha": "e08d3506c5fd373e8a1d39024182f15c6a01762e"
     },
     "gradle/build-logic/src/main/kotlin/SpotlessPlugin.kt": {
       "mode": "100644",
@@ -428,6 +432,10 @@
       "mode": "100644",
       "sha": "38b4b97fb9b3912c83d9bd9c6b8124a390e2e090"
     },
+    "gradle/build-logic/src/main/kotlin/io/github/keiyoushi/gradle/api/dsl/KeiyoushiRuntimeExtension.kt": {
+      "mode": "100644",
+      "sha": "87cae1ab449092ad102b2180f32044a00eca35f6"
+    },
     "gradle/build-logic/src/main/kotlin/io/github/keiyoushi/gradle/api/dsl/KeiyoushiThemeExtension.kt": {
       "mode": "100644",
       "sha": "5b14a3a4931f83420028303cf5aa7b542e53d144"
@@ -444,6 +452,10 @@
       "mode": "100644",
       "sha": "cde1c444c6b833d00bd9e35ae394d47220d0ba08"
     },
+    "gradle/build-logic/src/main/kotlin/io/github/keiyoushi/gradle/internal/Runtime.kt": {
+      "mode": "100644",
+      "sha": "6b4cdce42fda3a3002a6e4b814747137f3b3bad3"
+    },
     "gradle/build-logic/src/main/kotlin/io/github/keiyoushi/gradle/internal/Utils.kt": {
       "mode": "100644",
       "sha": "9e050aaf4b181ecd8fe49ef587aab4dcf6cc7f21"
@@ -454,7 +466,7 @@
     },
     "gradle/build-logic/src/main/kotlin/io/github/keiyoushi/gradle/internal/extensions/DependencyHandlerScope.kt": {
       "mode": "100644",
-      "sha": "9e1eedd8e974a6110c372d075bd5edaa0f9b3e28"
+      "sha": "4797dd43d8be4b8dc13d89d64ecfaad959d63690"
     },
     "gradle/build-logic/src/main/kotlin/io/github/keiyoushi/gradle/internal/extensions/PluginManager.kt": {
       "mode": "100644",
@@ -476,6 +488,10 @@
       "mode": "100644",
       "sha": "28eed58aed4f939fbb766c7ed5435d1f6f0004f3"
     },
+    "gradle/build-logic/src/main/kotlin/io/github/keiyoushi/gradle/tasks/GenerateRuntimeSourcesTask.kt": {
+      "mode": "100644",
+      "sha": "2f1e8cb389453df2945b5fc1f71e3cce55912df8"
+    },
     "gradle/build-logic/src/main/kotlin/io/github/keiyoushi/gradle/tasks/GenerateSourceInfoTask.kt": {
       "mode": "100644",
       "sha": "0cb6854da21b09681410b6ccf36daa1f6bd09a1a"
@@ -490,7 +506,7 @@
     },
     "gradle/libs.versions.toml": {
       "mode": "100644",
-      "sha": "6ddc83003ca0cc73aa06eea6bccf20f0996b7258"
+      "sha": "c38c4a1587cebd1ee804fdbaa8bd379086a38335"
     },
     "gradle/wrapper/gradle-wrapper.jar": {
       "mode": "100644",
@@ -814,5 +830,5 @@
     }
   },
   "repository": "keiyoushi/extensions-source",
-  "revision": "582615a352e38380378cb3f3c3001b0fa7897fe9"
+  "revision": "14e223961447ab0b21634d78ced6e49300613704"
 }
