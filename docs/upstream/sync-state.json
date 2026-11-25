@@ -578,7 +578,7 @@
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/MadaraBase.kt": {
       "mode": "100644",
-      "sha": "7ed88d967b71fb1dc8ab1441f129f2fc31db7570"
+      "sha": "cce8c9a7aa3a1f77a25f55b01ba58491c2acff88"
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/MadaraNoAjax.kt": {
       "mode": "100644",
@@ -830,5 +830,5 @@
     }
   },
   "repository": "keiyoushi/extensions-source",
-  "revision": "14e223961447ab0b21634d78ced6e49300613704"
+  "revision": "bac637ac333a03da0f8c5e7894713d782670b2d7"
 }
