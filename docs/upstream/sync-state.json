@@ -178,7 +178,7 @@
     },
     "core/src/main/kotlin/keiyoushi/utils/TurnstileHelper.kt": {
       "mode": "100644",
-      "sha": "8b4a3ca31ec5fb9a0ad9b82b3aaf618051a58f0c"
+      "sha": "1ab98fdb424940a04012feb9439a038859b34a9e"
     },
     "core/src/main/kotlin/keiyoushi/utils/WebView.kt": {
       "mode": "100644",
@@ -830,5 +830,5 @@
     }
   },
   "repository": "keiyoushi/extensions-source",
-  "revision": "bac637ac333a03da0f8c5e7894713d782670b2d7"
+  "revision": "5244cf4934b6e6ef3e6213440c3e1e12d8c94c1e"
 }
