@@ -528,25 +528,33 @@
       "mode": "100644",
       "sha": "fa4a4328b408a5a4d01c4043c798d9d1e0ccc1fb"
     },
+    "lib-multisrc/madara/assets/i18n/messages_ar.properties": {
+      "mode": "100644",
+      "sha": "5f7ee9c270ff3ffc6e6cb7ec4988a56c4f874799"
+    },
     "lib-multisrc/madara/assets/i18n/messages_en.properties": {
       "mode": "100644",
-      "sha": "ea433fb768812b865d43dd156e3ae2478a55ea7b"
+      "sha": "6c942f534298c34fbd21409eeb078d53112c764f"
     },
     "lib-multisrc/madara/assets/i18n/messages_es.properties": {
       "mode": "100644",
-      "sha": "a9d9f35a799c4d501c63e8cd60780ae163c18578"
+      "sha": "6008549c05fbf7fa18c5a56fc3d6d5c2ee30e7ef"
     },
     "lib-multisrc/madara/assets/i18n/messages_pt_br.properties": {
       "mode": "100644",
-      "sha": "fb90ab4aa0fddfb7666ad4396712f90225d81f20"
+      "sha": "fe99c28dd083671fe663b08bde4f2cd10ef60451"
+    },
+    "lib-multisrc/madara/assets/i18n/messages_tr.properties": {
+      "mode": "100644",
+      "sha": "9049f102a8359ba6292665401bc471468643c198"
     },
     "lib-multisrc/madara/assets/i18n/messages_uk.properties": {
       "mode": "100644",
-      "sha": "98d93dd5f2b9f6cf559465cf7121521a87bbee79"
+      "sha": "67a1b79877bd1184a58ce4ea16f8dda278134b15"
     },
     "lib-multisrc/madara/build.gradle.kts": {
       "mode": "100644",
-      "sha": "98aaa6aecd290a3e56c7700614fc61573881d603"
+      "sha": "cfdc86bd648b2667f956dee11f75e28e8c7607cb"
     },
     "lib-multisrc/madara/res/mipmap-hdpi/ic_launcher.png": {
       "mode": "100644",
@@ -578,7 +586,7 @@
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/MadaraBase.kt": {
       "mode": "100644",
-      "sha": "cce8c9a7aa3a1f77a25f55b01ba58491c2acff88"
+      "sha": "9f17460d66134ef04237decbb07dcb4ebcb08fa1"
     },
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/MadaraNoAjax.kt": {
       "mode": "100644",
@@ -587,6 +595,10 @@
     "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/Models.kt": {
       "mode": "100644",
       "sha": "c76670a30d95fcebaa13386ce2c575794da03347"
+    },
+    "lib-multisrc/madara/src/eu/kanade/tachiyomi/multisrc/madara/WebShieldInterceptor.kt": {
+      "mode": "100644",
+      "sha": "2cf0ae89218c0b6ba99276defad6b6b0228ff045"
     },
     "lib/i18n/build.gradle.kts": {
       "mode": "100644",
@@ -830,5 +842,5 @@
     }
   },
   "repository": "keiyoushi/extensions-source",
-  "revision": "5244cf4934b6e6ef3e6213440c3e1e12d8c94c1e"
+  "revision": "7a82aaf73ece5c18beb3fb8ced382eb6b87d1637"
 }
